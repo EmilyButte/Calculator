@@ -9,6 +9,22 @@ public class Calculator {
 
     private static double savedVal;
 
+    public double clearDisplayNum() {
+        return 0;
+    }
+
+    public void saveVal(double saveVal) {
+        savedVal = saveVal;
+    }
+
+    public double savedVal() {
+        return savedVal;
+    }
+
+    public void resetVal() {
+        savedVal = 0;
+    }
+
     public double add(double currentDisplayNum, double valueEntered) { return currentDisplayNum + valueEntered;}
 
     public double subtract(double currentDisplayNum, double valueEntered) {
@@ -25,6 +41,7 @@ public class Calculator {
     }
 
     public double squareNum(double currentDisplayNum) {
+
         return currentDisplayNum * currentDisplayNum;
     }
 
@@ -36,23 +53,6 @@ public class Calculator {
 
     public double invSignOfNum(double currentDisplayNum) {
         return currentDisplayNum * -1;
-    }
-
-
-    public double cleardisplayNum() {
-        return 0;
-    }
-
-    public void saveVal(double saveVal) {
-        savedVal = saveVal;
-    }
-
-    public double savedVal() {
-        return savedVal;
-    }
-
-    public void resetVal() {
-        savedVal = 0;
     }
 
     public double sinNum(double currentDisplayNum) {

@@ -1,18 +1,11 @@
 package CalculatorProject;
 
-/**
- * Created by emilybutte on 9/13/16.
- */
-
-// Scientific math features sourced from Kyle Jackson
-
 import javax.swing.JOptionPane;
 import static java.lang.Double.NaN;
 import static java.lang.Double.isInfinite;
 
 public class Display {
 
-    // Message showing calculator is on
     public Display() {
         System.out.println("Calculator running");
     }
@@ -52,7 +45,7 @@ public class Display {
                     showCommandMenu();
                     break;
                 case CLEAR:
-                    currentNum = calculator.cleardisplayNum();
+                    currentNum = calculator.clearDisplayNum();
                     break;
                 case SAVE:
                     System.out.println("Enter a number to save");
@@ -138,9 +131,9 @@ public class Display {
 
     public void switchDisplayMode() {
         if (currentDisplayMode == DisplayMode.DECIMAL) {
-            currentDisplayMode = DisplayMode.HEXDECIMAL;
+            currentDisplayMode = DisplayMode.HEXADECIMAL;
         }
-        if (currentDisplayMode == DisplayMode.HEXDECIMAL) {
+        if (currentDisplayMode == DisplayMode.HEXADECIMAL) {
             currentDisplayMode = DisplayMode.BINARY;
         }
         if (currentDisplayMode == DisplayMode.BINARY) {
@@ -155,11 +148,10 @@ public class Display {
         System.out.println("Current Number On Display: " + currentNum);
     }
 
-    // checkNum Method sourced from Kyle Jackson
     public void checkNum() {
         if (isInfinite(currentNum) || currentNum == NaN) {
             System.out.println("Err");
-            currentNum = calculator.cleardisplayNum();
+            currentNum = calculator.clearDisplayNum();
         }
     }
 
@@ -176,7 +168,7 @@ public class Display {
                 break;
             case DECIMAL:
                 break;
-            case HEXDECIMAL:
+            case HEXADECIMAL:
                 hexNum = calculator.convertValueToHex(currentNum);
                 System.out.println(hexNum);
                 break;
@@ -184,7 +176,7 @@ public class Display {
                 switchDisplayMode();
                 break;
             default:
-                System.out.println("The entry was not DECIMAL, BINARY, HEXDECIMAL, OCTAL, or ROTATE");
+                System.out.println("The entry was not DECIMAL, BINARY, HEXADECIMAL, OCTAL, or ROTATE");
                 break;
         }
     }
@@ -214,7 +206,8 @@ public class Display {
         }
     }
 
-    // Command Menu sourced from Kyle Jackson
+    /** Command menu created by Kyle Jackson */
+
     public void showCommandMenu() {
 
         JOptionPane.showMessageDialog(null, "----------------COMMAND MENU--------------------------\n" +
@@ -222,10 +215,10 @@ public class Display {
                 "SUBTRACT - Subtract number from current number on display\n" +
                 "MULTIPLY - Multiply number to current number on display\n" +
                 "DIVIDE - Divide number by current number on display\n" +
-                "SQUAREROOT - Find the square root of the curent number on display\n" +
+                "SQUAREROOT - Find the square root of the current number on display\n" +
                 "SQUARE - Square the current number on the display\n" +
                 "INVERSE - Find the inverse of the current number\n" +
-                "EXPONENTIAL - Find the varaible exponentiation of current number on display\n" +
+                "EXPONENTIAL - Find the variable exponentiation of current number on display\n" +
                 "CLEAR - Clear the current number on display\n" +
                 "INVERT - Invert the sign of the current number on display\n" +
                 "SAVE - Store a value in memory for later\n" +
@@ -241,7 +234,7 @@ public class Display {
                 "ILOG - Calculate the Inverse Logarithm of the number on display\n" +
                 "LN - Calculate the Natural Logarithm of the number on dispaly\n" +
                 "EX - Calculate the Inverse Natural Logarithm\n" +
-                "FACT - Calcualte the factorial of the number on display\n" +
+                "FACT - Calculate the factorial of the number on display\n" +
                 "DISPLAY - Switch Display Mode to BINARY, OCTAL, DECIMAL, HEXADECIMAL or ROTATE\n" +
                 "UNITS - Switch Unit Mode to DEGREES, RADIANS, or ROTATE\n" +
                 "OFF - Turn the Calculator Off\n" +

@@ -2,9 +2,6 @@ package CalculatorProject;
 
 import java.util.Scanner;
 
-/**
- * Created by emilybutte on 9/13/16.
- */
 public class User {
 
     public String getCommand() {
