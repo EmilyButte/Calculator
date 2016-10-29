@@ -159,7 +159,8 @@ public class CalculatorTest {
     public void invLnNumTest() {
         double expected = 54.59815003314423;
         double actual = calculator.invLnNum(4);
-        Assert.assertEquals("inverse natural log of 4  = 54.59815003314423", expected, actual, Math.ulp(1E-9));    }
+        Assert.assertEquals("inverse natural log of 4  = 54.59815003314423", expected, actual, Math.ulp(1E-9));
+    }
 
     @Test
     public void factNumTest() {
